@@ -1,0 +1,92 @@
+/* Home Page Container */
+.home-page {
+  padding: 20px;
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+}
+
+/* Title */
+.home-page h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+/* Anime Grid */
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted to auto-fill and use a minmax for flexible card width */
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: center; /* Center the grid */
+}
+
+/* Anime Card Styling */
+.anime-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: 100%; /* Ensure card takes the full width available in the grid */
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+}
+
+/* Anime Image */
+.anime-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Anime Card Info */
+.anime-card .anime-info {
+  padding: 15px;
+}
+
+.anime-card .anime-info h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #333;
+}
+
+.anime-card .anime-info p {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+
+/* Loading Message */
+.loading {
+  font-size: 1.5rem;
+  color: #0073e6;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .home-page h1 {
+      font-size: 2rem;
+  }
+
+  .anime-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Decrease column width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page h1 {
+      font-size: 1.5rem;
+  }
+
+  .anime-grid {
+      grid-template-columns: 1fr; /* Single column layout on very small screens */
+  }
+}

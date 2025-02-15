@@ -1,0 +1,131 @@
+.anime-detail-page {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .anime-header {
+    margin-bottom: 20px;
+  }
+  
+  .anime-detail-image {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+  }
+  
+  h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  .characters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .character {
+    text-align: center;
+  }
+  
+  .character-image {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  h3 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+
+  .add-to-list-button {
+    padding: 15px 20px;
+    background-color: #1f78b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .add-to-list-button:hover {
+      background-color: #0056b3;
+  }
+
+  .message {
+      margin-top: 10px;
+      color: green;
+      font-weight: bold;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .modal-actions button:first-child {
+      background-color: #1f78b4;
+      color: white;
+  }
+
+  .modal-actions button:last-child {
+      background-color: #ccc;
+  }
+
+
+  

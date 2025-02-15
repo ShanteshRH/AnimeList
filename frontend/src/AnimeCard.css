@@ -1,0 +1,78 @@
+/* Anime Card Styling */
+.anime-card {
+  width: 300px; /* Increased width */
+  background-color: #fafafa; /* Light grey background for contrast */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow to lift the card */
+  margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.anime-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for hover effect */
+}
+
+/* Image Styling */
+.anime-card-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-bottom: 4px solid #4caf50; /* Green accent border */
+}
+
+/* Card Content */
+.anime-card-content {
+  padding: 15px;
+  background-color: #fff; /* White background for the content section */
+  border-top: 1px solid #e0e0e0; /* Subtle divider line */
+}
+
+/* Title Styling */
+.anime-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.anime-card-title:hover {
+  color: #4caf50; /* Green color on hover */
+}
+
+/* Description Styling */
+.anime-card-description {
+  font-size: 0.95rem;
+  color: #555; /* Darker grey for better readability */
+  margin: 10px 0;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Rating Styling */
+.anime-card-rating {
+  font-size: 1rem;
+  color: #4caf50; /* Green color for emphasis */
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Link Styling */
+.anime-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .anime-card {
+    width: 100%; /* Full width on smaller screens */
+    margin: 10px 0;
+  }
+}
