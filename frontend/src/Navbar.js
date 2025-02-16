@@ -10,6 +10,7 @@ const Navbar = ({onSearch,disableSearch}) => {
     const [dropdownVisible,setDropdownVisible] = useState(false);
     const [username, setUsername] = useState('');
     const [profilePicture, setProfilePicture] = useState(null);
+    const [searchInput, setSearchInput] = useState("");
     
     useEffect(() => {
         const storedUsername = localStorage.getItem('username'); 
@@ -43,16 +44,25 @@ const Navbar = ({onSearch,disableSearch}) => {
     }
 
     const handleChange = (e) => {
-        onSearch(e.target.value);
+        setSearchInput(e.target.value); 
     }
 
+    const handleSearchClick = () => {
+        onSearch(searchInput); // Only update search when button is clicked
+    };
+
+    const handleHomeClick = () => {
+        setSearchInput("");
+        onSearch("");
+        navigate("/home");
+    }
 
     return (
         <nav className={`navbar`}>
             <div className='navbar-brand'>
-                <Link to="/home" className='home-icon'>
+                <button className='home-icon' onClick={handleHomeClick}>
                     <FaHome size={30} color="white"/>
-                </Link>
+                </button>
                 <h1>Anilist</h1>
             </div>
             <div className='navbar-search'>
@@ -62,11 +72,12 @@ const Navbar = ({onSearch,disableSearch}) => {
                         type="text"
                         placeholder='Search Anime...'
                         className='search-input'
+                        value={searchInput}
                         onChange={handleChange}
                     />
                     <button 
                         className='search-button' 
-                        onClick={() => onSearch(document.querySelector('.search-input').value)}
+                        onClick={handleSearchClick}
                     >
                         Search
                     </button>

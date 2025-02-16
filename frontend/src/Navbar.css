@@ -43,9 +43,23 @@
 
 /* Home icon styling */
 .home-icon {
-    font-size: 32px; /* Increase icon size */
-    color: white; /* Icon color */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove padding */
+}
+
+.home-icon svg {
+    font-size: 32px; /* Icon size */
+    color: white; /* Icon color */
+    transition: transform 0.2s ease-in-out;
+}
+
+.home-icon:hover svg {
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 /* Search bar styling */
