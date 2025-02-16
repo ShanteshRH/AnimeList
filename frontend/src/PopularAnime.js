@@ -22,7 +22,7 @@ const PopularAnime = () => {
     
     return (
         <div className='popular-anime-page'>
-            <Navbar disableSearch={true}/>
+            {/* <Navbar disableSearch={true}/> */}
             <h1>Popular Anime List</h1>
             <div className='popular-anime-grid'>
                 {popularanimeData.map((anime) => (

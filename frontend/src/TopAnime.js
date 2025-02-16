@@ -22,7 +22,7 @@ const TopAnime = () => {
 
     return (
         <div className={`top-anime-page`}>
-            <Navbar disableSearch={true}/>
+            {/* <Navbar disableSearch={true}/> */}
             <h1>Top Anime List</h1>
             <div className='top-anime-grid'>
                 {topanimeData.map((anime) => (
